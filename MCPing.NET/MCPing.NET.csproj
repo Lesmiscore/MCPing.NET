@@ -44,6 +44,7 @@
     <Compile Include="PE\FullStat.cs" />
     <Compile Include="PE\PEQuery.cs" />
     <Compile Include="PE\Request.cs" />
+    <Compile Include="PE\UnconnectedPing.cs" />
     <Compile Include="ServerPingResult.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
