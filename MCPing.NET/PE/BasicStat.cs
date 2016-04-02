@@ -8,9 +8,6 @@ namespace nao20010128nao.MCPing.PE
 {
     public class BasicStat : ServerPingResult
     {
-        static byte NULL = 00;
-        static byte SPACE = 20;
-
         // for simple stat
         private string motd, gameMode, mapName;
         private int onlinePlayers, maxPlayers;

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace nao20010128nao.MCPing.PE
 {
     public class FullStat : ServerPingResult
     {
-        static byte NULL = 00;
-        static byte SPACE = 20;
-
         private Dictionary<string, string> datas = new Dictionary<string, string>();
         private List<string> playerList = new List<string>();
 
