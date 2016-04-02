@@ -44,15 +44,20 @@ namespace nao20010128nao.MCPing.PE
             }
         }
 
-        public IDictionary<string, string> getData()
+        public IDictionary<string, string> Data
         {
-            return new Dictionary<string, string>(datas);
+            get
+            {
+                return new Dictionary<string, string>(datas);
+            }
         }
 
-        public IList<string> getPlayerList()
+        public IList<string> Players
         {
-            return playerList.AsReadOnly();
+            get
+            {
+                return playerList.AsReadOnly();
+            }
         }
-
     }
 }

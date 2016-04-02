@@ -50,29 +50,44 @@ namespace nao20010128nao.MCPing.PE
             return str.ToString();
         }
 
-        public string getMOTD()
+        public string Motd
         {
-            return motd;
+            get
+            {
+                return motd;
+            }
         }
 
-        public string getGameMode()
+        public string GameMode
         {
-            return gameMode;
+            get
+            {
+                return gameMode;
+            }
         }
 
-        public string getMapName()
+        public string MapName
         {
-            return mapName;
+            get
+            {
+                return mapName;
+            }
         }
 
-        public int getOnlinePlayers()
+        public int OnlinePlayers
         {
-            return onlinePlayers;
+            get
+            {
+                return onlinePlayers;
+            }
         }
 
-        public int getMaxPlayers()
+        public int MaxPlayers
         {
-            return maxPlayers;
+            get
+            {
+                return maxPlayers;
+            }
         }
     }
 }
