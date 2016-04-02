@@ -23,7 +23,7 @@ namespace nao20010128nao.MCPing.PE
                 baos.Write(BitConverter.GetBytes(DateTime.Now.ToBinary()), 0, 8);
                 baos.Write(BitConverter.GetBytes(MAGIC_1ST), 0, 8);
                 baos.Write(BitConverter.GetBytes(MAGIC_2ND), 0, 8);
-                ds.Send(baos.ToArray(), (int)baos.Length, new IPEndPoint(IPAddress.Parse(ip), port));
+                ds.Send(baos.ToArray(), (int)baos.Length, new IPEndPoint(Dns.GetHostEntry(ip).AddressList[0], port));
 
                 IPEndPoint ep = null;
                 byte[] recv = ds.Receive(ref ep);
