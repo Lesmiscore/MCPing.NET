@@ -37,6 +37,7 @@ namespace nao20010128nao.MCPing
             while (true)
             {
                 int k = strm.ReadByte();
+                if (k == -1) continue;
                 i |= (k & 0x7F) << j++ * 7;
                 if (j > 5)
                     throw new Exception("VarInt too big");

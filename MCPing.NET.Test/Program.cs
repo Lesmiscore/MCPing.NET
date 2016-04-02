@@ -1,4 +1,5 @@
-﻿using nao20010128nao.MCPing.PE;
+﻿using nao20010128nao.MCPing.PC;
+using nao20010128nao.MCPing.PE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace MCPing.NET.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new PEQuery("127.0.0.1", 19132).FullStat().Data["hostname"]);
+            Console.WriteLine(((Reply)new PCQuery("hanageserver.com", 25565).fetchReply()).description);
             Console.ReadKey();
         }
     }

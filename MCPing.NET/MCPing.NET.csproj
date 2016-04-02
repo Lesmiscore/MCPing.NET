@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PC\PCQuery.cs" />
+    <Compile Include="PC\PCQueryResult.cs" />
+    <Compile Include="PC\Reply19.cs" />
+    <Compile Include="PC\Reply.cs" />
     <Compile Include="PE\BasicStat.cs" />
     <Compile Include="PE\FullStat.cs" />
     <Compile Include="PE\PEQuery.cs" />
