@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PE\BasicStat.cs" />
+    <Compile Include="PE\FullStat.cs" />
     <Compile Include="ServerPingResult.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

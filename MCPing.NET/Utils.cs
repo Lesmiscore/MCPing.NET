@@ -156,7 +156,7 @@ namespace nao20010128nao.MCPing
 
         public static int bytesToInt(byte[] val)
         {
-            return val[0] << 24 | val[1] << 16| val[2] << 8 | val[3] << 0;
+            return val[0] << 24 | val[1] << 16 | val[2] << 8 | val[3] << 0;
         }
     }
 }
