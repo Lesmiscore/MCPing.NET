@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MCPing.NET
+namespace nao20010128nao.MCPing
 {
     public class Class1
     {
