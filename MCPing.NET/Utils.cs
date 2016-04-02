@@ -13,7 +13,7 @@ namespace nao20010128nao.MCPing
         public static readonly int PROTOCOL_VERSION = 4;
         public static readonly int STATUS_HANDSHAKE = 1;
 
-        public static void validate(Object o, String m)
+        public static void validate(object o, string m)
         {
             if (o == null)
             {
@@ -21,7 +21,7 @@ namespace nao20010128nao.MCPing
             }
         }
 
-        public static void io(bool b, String m)
+        public static void io(bool b, string m)
         {
             if (b)
             {

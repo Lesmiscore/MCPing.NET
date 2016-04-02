@@ -11,8 +11,8 @@ namespace nao20010128nao.MCPing.PE
         static byte NULL = 00;
         static byte SPACE = 20;
 
-        private Dictionary<String, String> datas = new Dictionary<String, String>();
-        private List<String> playerList = new List<String>();
+        private Dictionary<string, string> datas = new Dictionary<string, string>();
+        private List<string> playerList = new List<string>();
 
         public FullStat(byte[] data)
         {
@@ -34,8 +34,8 @@ namespace nao20010128nao.MCPing.PE
 
             for (int i = 2; i < dataEnds; i += 2)
             {
-                String k = new UTF8Encoding().GetString(temp[i]);
-                String v = new UTF8Encoding().GetString(temp[i + 1]);
+                string k = new UTF8Encoding().GetString(temp[i]);
+                string v = new UTF8Encoding().GetString(temp[i + 1]);
                 if ("" == k | "" == v)
                 {
                     continue;
@@ -43,19 +43,19 @@ namespace nao20010128nao.MCPing.PE
                 datas[k] = v;
             }
 
-            playerList = new List<String>();//
+            playerList = new List<string>();//
             for (int i = dataEnds + 2; i < temp.Length; i++)
             {
                 playerList.Add(new UTF8Encoding().GetString(temp[i]));
             }
         }
 
-        public IDictionary<String, String> getData()
+        public IDictionary<string, string> getData()
         {
-            return new Dictionary<String, String>(datas);
+            return new Dictionary<string, string>(datas);
         }
 
-        public IList<String> getPlayerList()
+        public IList<string> getPlayerList()
         {
             return playerList.AsReadOnly();
         }

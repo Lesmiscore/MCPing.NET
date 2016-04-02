@@ -12,10 +12,10 @@ namespace nao20010128nao.MCPing.PE
         static byte SPACE = 20;
 
         // for simple stat
-        private String motd, gameMode, mapName;
+        private string motd, gameMode, mapName;
         private int onlinePlayers, maxPlayers;
         private short port;
-        private String hostname;
+        private string hostname;
 
         public BasicStat(byte[] data)
         {
@@ -33,9 +33,9 @@ namespace nao20010128nao.MCPing.PE
         }
 
 
-        public override String ToString()
+        public override string ToString()
         {
-            String delimiter = ", ";
+            string delimiter = ", ";
             StringBuilder str = new StringBuilder();
             str.Append(motd);
             str.Append(delimiter);
@@ -53,17 +53,17 @@ namespace nao20010128nao.MCPing.PE
             return str.ToString();
         }
 
-        public String getMOTD()
+        public string getMOTD()
         {
             return motd;
         }
 
-        public String getGameMode()
+        public string getGameMode()
         {
             return gameMode;
         }
 
-        public String getMapName()
+        public string getMapName()
         {
             return mapName;
         }
