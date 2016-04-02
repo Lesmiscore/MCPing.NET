@@ -11,7 +11,7 @@ namespace MCPing.NET.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(UnconnectedPing.DoPing("sg.lbsg.net",19132).ServerName);
+            Console.WriteLine(new PEQuery("127.0.0.1", 19132).FullStat().getData()["hostname"]);
             Console.ReadKey();
         }
     }

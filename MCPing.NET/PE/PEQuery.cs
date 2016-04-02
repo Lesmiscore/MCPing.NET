@@ -28,11 +28,12 @@ namespace nao20010128nao.MCPing.PE
             req.type = HANDSHAKE;
             req.sessionID = GenerateSessionID();
 
-            int val = 11 - req.ToBytes().Length; // should be 11 bytes total
-            byte[] input = Utils.padArrayEnd(req.ToBytes(), val);
+            byte[] reqBytes = req.ToBytes();
+            int val = 11 - reqBytes.Length; // should be 11 bytes total
+            byte[] input = Utils.padArrayEnd(reqBytes, val);
             byte[] result = SendUDP(input);
 
-            token = int.Parse(new UTF8Encoding().GetString(result).Trim());
+            token = int.Parse(new UTF8Encoding().GetString(result, 5, result.Length - 6).Trim());
         }
 
         public BasicStat BasicStat()
@@ -94,7 +95,7 @@ namespace nao20010128nao.MCPing.PE
                     }
                 }
 
-                socket.Send(input, input.Length, new IPEndPoint(IPAddress.Parse(serverAddress), queryPort));
+                socket.Send(input, input.Length, new IPEndPoint(Dns.GetHostEntry(serverAddress).AddressList[0], queryPort));
 
                 IPEndPoint ep = null;
                 return socket.Receive(ref ep);
